@@ -243,4 +243,38 @@
       </div>
     </div>
   </footer>
+</footer>
+
+<script>
+// Detect language change and apply RTL styling if needed
+
+function applyRTLIfNeeded() {
+  // List of RTL language codes
+  const rtlLangs = ['ar', 'he', 'fa', 'ur'];
+  const htmlEl = document.documentElement;
+  const lang = htmlEl.lang || navigator.language || navigator.userLanguage;
+  // Check if the language is RTL
+  const isRTL = rtlLangs.some(code => lang.startsWith(code));
+  if (isRTL) {
+    htmlEl.setAttribute('dir', 'rtl');
+    document.body.classList.add('rtl');
+  } else {
+    htmlEl.setAttribute('dir', 'ltr');
+    document.body.classList.remove('rtl');
+  }
+  // Set email input direction
+  var emailInput = document.getElementById('subscriberEmail');
+  if (emailInput) {
+    emailInput.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+    emailInput.style.textAlign = isRTL ? 'right' : 'left';
+  }
+}
+
+// Observe changes to the lang attribute
+const observer = new MutationObserver(applyRTLIfNeeded);
+observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+// Initial check
+applyRTLIfNeeded();
+</script>
 </html>
