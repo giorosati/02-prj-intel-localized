@@ -164,46 +164,64 @@
 <section class="container my-5">
   <div class="row">
     <!-- Column 1 -->
-    <div class="col-md-4 mb-4">
-      <h3>Column 1 Title</h3>
-      <p>
-        This is the content for the first column. You can add text, images, or other elements here.
-      </p>
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card bg-light border-0 shadow rounded-4 w-100">
+        <div class="card-body">
+          <h3 class="card-title">Column 1 Title</h3>
+          <p>
+            This is the content for the first column. You can add text, images, or other elements here.
+          </p>
+        </div>
+      </div>
     </div>
     <!-- Column 2 -->
-    <div class="col-md-4 mb-4">
-      <h3>Column 2 Title</h3>
-      <p>
-        This is the content for the second column. It will appear next to the first column on medium and larger screens.
-      </p>
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card bg-light border-0 shadow rounded-4 w-100">
+        <div class="card-body">
+          <h3 class="card-title">Column 2 Title</h3>
+          <p>
+            This is the content for the second column. It will appear next to the first column on medium and larger screens.
+          </p>
+        </div>
+      </div>
     </div>
     <!-- Column 3 -->
-    <div class="col-md-4 mb-4">
-      <h3>Column 3 Title</h3>
-      <p>
-        This is the content for the third column. On small screens, all columns stack vertically.
-      </p>
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card bg-light border-0 shadow rounded-4 w-100">
+        <div class="card-body">
+          <h3 class="card-title">Column 3 Title</h3>
+          <p>
+            This is the content for the third column. On small screens, all columns stack vertically.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
   <!-- Subscription Form -->
   <section>
-    <h2>Subscribe to our Newsletter</h2>
-      <!-- Simple Bootstrap Subscription Form -->
-      <form class="d-flex flex-column align-items-center gap-3" action="#" method="post">
-        <div style="max-width: 350px; width: 100%;">
-          <label for="subscriberName" class="form-label">Name</label>
-          <input type="text" class="form-control" id="subscriberName" name="name" placeholder="Enter your name" required>
+    <div class="container d-flex justify-content-center">
+  <div class="card bg-light border-0 shadow-lg rounded-4 my-4" style="max-width: 500px; width: 100%;">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">Subscribe to our Newsletter</h2>
+          <!-- Simple Bootstrap Subscription Form -->
+          <form class="d-flex flex-column align-items-center gap-3" action="#" method="post">
+            <div style="max-width: 350px; width: 100%;">
+              <label for="subscriberName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="subscriberName" name="name" placeholder="Enter your name" required>
+            </div>
+            <div style="max-width: 350px; width: 100%;">
+              <label for="subscriberEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="subscriberEmail" name="email" placeholder="Enter your email" required>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+          </form>
         </div>
-        <div style="max-width: 350px; width: 100%;">
-          <label for="subscriberEmail" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="subscriberEmail" name="email" placeholder="Enter your email" required>
-        </div>
-        <div>
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </div>
-      </form>
+      </div>
+    </div>
   </section>
 
 
